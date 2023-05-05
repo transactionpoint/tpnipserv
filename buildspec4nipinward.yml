@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+     
+
+  build:
+    commands:
+  post_build:
+    commands:
+      - printf '[{"name":"nipinwardcontainer","imageUri":"public.ecr.aws/e4x7n7z3/tpnipserv:latest"}]' > imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
